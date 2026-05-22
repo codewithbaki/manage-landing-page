@@ -19,8 +19,8 @@ h6 {
 }
 html,
 body {
-  /* width: 100%; */
-  max-width: 100%;
+  width: 100%;
+  max-width: 100%; /* when i was having issue with the width of the responsiveness scroling, i used the max-width of 100% and overflow-x hidden to solve it */
   overflow-x: hidden;
 }
 body {
