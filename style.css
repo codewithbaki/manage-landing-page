@@ -187,6 +187,9 @@ p {
   transform: translateX(-50%);
   top: -25px;
 }
+.slider-dots {
+  display: none;
+}
 .testimonial .btn {
   display: flex;
   align-items: center;
@@ -433,8 +436,40 @@ footer::after {
   }
   .testimonial-container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 40px 0px 20px;
+    margin: 3rem 0 1rem;
+    scrollbar-width: none;
+  }
+  .testimonial-container::-webkit-scrollbar {
+    display: none;
+  }
+  .testimonial-card {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+  }
+  .slider-dots {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 3rem;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border: 1px solid hsl(12, 88%, 59%);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .dot.active {
+    background-color: hsl(12, 88%, 59%);
   }
 
   .foot-text {
